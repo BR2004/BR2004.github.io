@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background:gray;
+  text-align: center;
+}
+div {
+  height: 470px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+font-family: 'Fredoka One', cursive;
+  text-align: center;
+  font-size: 75px;
+  color:teal;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color:teal;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: teal;
+  background: white;
+  background:  linear-gradient(bottom, rgba(10,20,24,1), rgba(10,20,24,.4));
+  background: -webkit-linear-gradient(bottom, rgba(10,20,24,1), rgba(10,12,24,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+
+.price {
+  float: right;
+}
+ ul {
+      padding: 10px;
+      background: gray;
+    
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+
+@media (max-width: 500px) {
+  
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+  <ul>
+      <li><button onclick=cakes()>cakes</button></li>
+      <li><button onclick=cupcakes()>cupcakes</button></li> 
+      <li><button onclick=cookies()>cookies</button></li>
+  </ul>
+    
+<h1>Briana's Bakery </h1>
+<h2>A store to please your sweet tooth</h2>
+
+<div id="apple"></div>
+<script>
+cakesImages = [
+           'url("https://www.modernhoney.com/wp-content/uploads/2017/12/Red-Velvet-Cake-12.jpg")',
+           'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3yXWvdstw_E9iJ0Wjgppmc03mUFa3AGF8MxcGhzv1QUqHql_Dw")',
+           'url("https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/109778.jpg")',
+]
+
+cupcakesImages = [
+            'url("https://www.fifteenspatulas.com/wp-content/uploads/2011/10/Chocolate-Peanut-Butter-Cupcakes-Fifteen-Spatulas-11-640x427.jpg")',
+            'url("https://www.cookingclassy.com/wp-content/uploads/2018/01/chocolate-covered-strawberry-cupcakes-3.jpg")',
+            'url("http://cakemerchant.com/wp-content/uploads/Peanut-Butter-Oreo-Cupcakes-8.jpg")',
+]
+
+cookiesImages = [
+           'url("https://i2.wp.com/www.livewellbakeoften.com/wp-content/uploads/2017/11/Cut-out-Sugar-Cookies-with-Cream-Cheese-Frosting-3.jpg?resize=1360%2C2040")',
+           'url("https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg")',
+           'url("https://cookieandkate.com/images/2016/12/best-oatmeal-cookies-recipe-2.jpg")',
+]
+
+function cakes() {
+  storm = document.getElementById("apple")
+  storm.innerHTML=''
+  storm.innerHTML += cakesDivs[0]
+  storm.innerHTML += cakesDivs[1]
+  storm.innerHTML += cakesDivs[2]
+  //alert("you have picked cakes")
+  items = document.getElementsByClassName("item")
+  items[0].style.background = cakesImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = cakesImages[1]
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.background = cakesImages[2]
+  items[2].style.backgroundSize = '100% 100%'
+}
+
+function cupcakes() {
+  storm = document.getElementById("apple")
+  storm.innerHTML=''
+  storm.innerHTML += cupcakesDivs[0]
+  storm.innerHTML += cupcakesDivs[1]
+  storm.innerHTML += cupcakesDivs[2]
+  //alert("you have picked cupcakes")
+  items = document.getElementsByClassName("item")
+  items[0].style.background = cupcakesImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = cupcakesImages[1]
+  items[1].style.backgroundSize = '110% 110%'
+  items[2].style.background = cupcakesImages[2]
+  items[3].style.background = '100% 100%'
+}
+
+function cookies() { 
+  storm = document.getElementById("apple")
+  storm.innerHTML=''
+  storm.innerHTML += cookiesDivs[0]
+  storm.innerHTML += cookiesDivs[1]
+  storm.innerHTML += cookiesDivs[2]
+  //alert("you have picked cookie")
+  items = document.getElementsByClassName("item")
+  items[0].style.background = cookiesImages[0]
+  items[0].style.backgroundSize = '115% 115%'
+  items[1].style.background = cookiesImages[1]
+  items[1].style.backgroundSize = '110% 110%'
+  items[2].style.background = cookiesImages[2]
+  items[2].style.backgroundSize = '120% 120%'
+}
+cakesDivs = [
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>red velvet cake<span class="price">$14</span><br /><small>red velvet cake with venilla frosting. </small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>marble cake<span class="price">$22</span><br /><small>soft cake with venilla and chocolate inside.</small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate cake<span class="price">$8</span><br /><small>chocolate fuge and moca inside with chocolate frosting in top. </small></p></div>',
+]
+cupcakesDivs = [
+   '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate peanut butter cupcakes<span class="price">$14</span><br /><small>choclate cupcake with peanut butter filling inside and a peanut butter frosting with choclate drizzle. </small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate strawberry cupcake<span class="price">$22</span><br /><small>chocolate inside and strawberry frosting on top with a chocolate covered strawberry.</small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>oreo cupcake<span class="price">$8</span><br /><small>chocolate inside and cookies and cream frosting in top with a oreo. </small></p></div>',
+]
+cookiesDivs = [
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>sugar cookies<span class="price">$14</span><br /><small>soft cookie with venilla frosting and rainnbow sprinkles in top </small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate chip cookies<span class="price">$22</span><br /><small>soft cookie with chocolate chips inside.</p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>oat meal cookies <span class="price">$8</span><br /><small>soft cookie with oat meal.</small></p></div>',
+]
+  
+  
+</script>
+
+</body>
