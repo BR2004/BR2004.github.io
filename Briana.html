@@ -1,8 +1,7 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <script src="/assets/jquery.js"></script>
+<script src="/assets/jquery.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
 <style>
 body {
@@ -109,6 +108,7 @@ small {
       <li><button onclick=cakes()>cakes</button></li>
       <li><button onclick=cupcakes()>cupcakes</button></li> 
       <li><button onclick=cookies()>cookies</button></li>
+      <li><button onclick=milkshakes()>milkshakes</button></li>
   </ul>
     
 <h1>Briana's Bakery </h1>
@@ -120,18 +120,26 @@ cakesImages = [
            'url("https://www.modernhoney.com/wp-content/uploads/2017/12/Red-Velvet-Cake-12.jpg")',
            'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3yXWvdstw_E9iJ0Wjgppmc03mUFa3AGF8MxcGhzv1QUqHql_Dw")',
            'url("https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/109778.jpg")',
+           'url(https://sallysbakingaddiction.com/wp-content/uploads/2015/05/Sallys-Baking-Addiction-Recipe-Funfetti-Layer-Cake.jpg)',
 ]
 
 cupcakesImages = [
             'url("https://www.fifteenspatulas.com/wp-content/uploads/2011/10/Chocolate-Peanut-Butter-Cupcakes-Fifteen-Spatulas-11-640x427.jpg")',
             'url("https://www.cookingclassy.com/wp-content/uploads/2018/01/chocolate-covered-strawberry-cupcakes-3.jpg")',
             'url("http://cakemerchant.com/wp-content/uploads/Peanut-Butter-Oreo-Cupcakes-8.jpg")',
+            'url("https://img.buzzfeed.com/thumbnailer-prod-us-east-1/933b399b83a7493da7738f20335a8a51/BFV8447_Cupcakes_4_Ways-FB1080.jpg")',
 ]
 
 cookiesImages = [
            'url("https://i2.wp.com/www.livewellbakeoften.com/wp-content/uploads/2017/11/Cut-out-Sugar-Cookies-with-Cream-Cheese-Frosting-3.jpg?resize=1360%2C2040")',
            'url("https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg")',
            'url("https://cookieandkate.com/images/2016/12/best-oatmeal-cookies-recipe-2.jpg")',
+           'url("https://i1.wp.com/www.livewellbakeoften.com/wp-content/uploads/2017/01/Red-Velvet-Cookies-5.jpg?resize=1360%2C2040&ssl=1")',
+]
+
+milkshakesImages = [
+            'url("https://www.torani.com/sites/default/files/recipes/illustration/Vanilla%20Milkshake.jpg")',
+            'url("https://simpleveganblog-lne9w9dshg8v.stackpathdns.com/wp-content/uploads/2014/09/Ultimate-vegan-chocolate-shake-4.jpg")',
 ]
 
 function cakes() {
@@ -140,6 +148,7 @@ function cakes() {
   storm.innerHTML += cakesDivs[0]
   storm.innerHTML += cakesDivs[1]
   storm.innerHTML += cakesDivs[2]
+  storm.innerHTML += cakesDivs[3]
   //alert("you have picked cakes")
   items = document.getElementsByClassName("item")
   items[0].style.background = cakesImages[0]
@@ -148,6 +157,8 @@ function cakes() {
   items[1].style.backgroundSize = '100% 100%'
   items[2].style.background = cakesImages[2]
   items[2].style.backgroundSize = '100% 100%'
+  items[3].style.background = cakesImages[3]
+  items[3].style.backgroundSize = '100% 100%'
 }
 
 function cupcakes() {
@@ -156,6 +167,7 @@ function cupcakes() {
   storm.innerHTML += cupcakesDivs[0]
   storm.innerHTML += cupcakesDivs[1]
   storm.innerHTML += cupcakesDivs[2]
+  storm.innerHTML += cupcakesDivs[3]
   //alert("you have picked cupcakes")
   items = document.getElementsByClassName("item")
   items[0].style.background = cupcakesImages[0]
@@ -163,7 +175,9 @@ function cupcakes() {
   items[1].style.background = cupcakesImages[1]
   items[1].style.backgroundSize = '110% 110%'
   items[2].style.background = cupcakesImages[2]
-  items[3].style.background = '100% 100%'
+  items[2].style.backgroundSize = '100% 100%'
+  items[3].style.background = cupcakesImages[3]
+  items[3].style.backgroundSize = '100% 100%'
 }
 
 function cookies() { 
@@ -172,6 +186,7 @@ function cookies() {
   storm.innerHTML += cookiesDivs[0]
   storm.innerHTML += cookiesDivs[1]
   storm.innerHTML += cookiesDivs[2]
+  storm.innerHTML += cookiesDivs[3]
   //alert("you have picked cookie")
   items = document.getElementsByClassName("item")
   items[0].style.background = cookiesImages[0]
@@ -180,13 +195,30 @@ function cookies() {
   items[1].style.backgroundSize = '110% 110%'
   items[2].style.background = cookiesImages[2]
   items[2].style.backgroundSize = '120% 120%'
+  items[3].style.background = cookiesImages[3]
+  items[3].style.backgroundSize = '100% 100%'
 }
+function milkshakes() {
+  storm = document.getElementById("apple")
+  storm.innerHTML=''
+  storm.innerHTML += milkshakesDivs[0]
+  storm.innerHTML += milkshakesDivs[1]
+  //alert("you have picked milkshakes")
+  items = document.getElementsByClassName("item")
+  items[0].style.background = milkshakesImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = milkshakesImages[1]
+  items[1].style.backgroundSize = '100% 100%'
+}
+
 cakesDivs = [
-  '<div class="item" onclick=this.classList.toggle("show-description")><p>red velvet cake<span class="price">$14</span><br /><small>red velvet cake with venilla frosting. </small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>red velvet cake<span class="price">$14</span><br /><small>red velvet cake with vanilla frosting. </small></p></div>',
   
-'<div class="item" onclick=this.classList.toggle("show-description")><p>marble cake<span class="price">$22</span><br /><small>soft cake with venilla and chocolate inside.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>marble cake<span class="price">$22</span><br /><small>soft cake with vanilla and chocolate inside.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate cake<span class="price">$8</span><br /><small>chocolate fuge and moca inside with chocolate frosting in top. </small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>confetti cake<span class="price">$8</span><br /><small>colorfull vanilla inside with vanilla frosting on top.</small></p></div>',
 ]
 cupcakesDivs = [
    '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate peanut butter cupcakes<span class="price">$14</span><br /><small>choclate cupcake with peanut butter filling inside and a peanut butter frosting with choclate drizzle. </small></p></div>',
@@ -194,16 +226,29 @@ cupcakesDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate strawberry cupcake<span class="price">$22</span><br /><small>chocolate inside and strawberry frosting on top with a chocolate covered strawberry.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>oreo cupcake<span class="price">$8</span><br /><small>chocolate inside and cookies and cream frosting in top with a oreo. </small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>vanilla cupcake<span class="price">$8</span><br /><small>vanilla inside with vanilla frosting and chocolate chips in top. </small></p></div>',
+
 ]
 cookiesDivs = [
-  '<div class="item" onclick=this.classList.toggle("show-description")><p>sugar cookies<span class="price">$14</span><br /><small>soft cookie with venilla frosting and rainnbow sprinkles in top </small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>sugar cookies<span class="price">$14</span><br /><small>soft cookie with vanilla frosting and rainnbow sprinkles in top </small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate chip cookies<span class="price">$22</span><br /><small>soft cookie with chocolate chips inside.</p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>oat meal cookies <span class="price">$8</span><br /><small>soft cookie with oat meal.</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>red velvet cookies <span class="price">$8</span><br /><small>soft red velvet cookie with white chocolate chips inside.</small></p></div>',
+
 ]
+milkshakesDivs = [
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>sugar cookies<span class="price">$14</span><br /><small>soft cookie with vanilla frosting and rainnbow sprinkles in top </small></p></div>',
   
+'<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate chip cookies<span class="price">$22</span><br /><small>soft cookie with chocolate chips inside.</p></div>',
+  
+]
+
   
 </script>
 
 </body>
+
