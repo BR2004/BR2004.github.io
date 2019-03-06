@@ -121,6 +121,7 @@ cakesImages = [
            'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3yXWvdstw_E9iJ0Wjgppmc03mUFa3AGF8MxcGhzv1QUqHql_Dw")',
            'url("https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/109778.jpg")',
            'url(https://sallysbakingaddiction.com/wp-content/uploads/2015/05/Sallys-Baking-Addiction-Recipe-Funfetti-Layer-Cake.jpg)',
+           'url("http://atreatsaffair.com/wp-content/uploads/2014/07/smores-coffee-cake-recipe-.jpg")',
 ]
 
 cupcakesImages = [
@@ -149,6 +150,7 @@ function cakes() {
   storm.innerHTML += cakesDivs[1]
   storm.innerHTML += cakesDivs[2]
   storm.innerHTML += cakesDivs[3]
+  storm.innerHTML += cakesDivs[4]
   //alert("you have picked cakes")
   items = document.getElementsByClassName("item")
   items[0].style.background = cakesImages[0]
@@ -159,6 +161,8 @@ function cakes() {
   items[2].style.backgroundSize = '100% 100%'
   items[3].style.background = cakesImages[3]
   items[3].style.backgroundSize = '100% 100%'
+  items[4].style.background = cakesImages[4]
+  items[4].style.backgroundSize = '100% 100%'
 }
 
 function cupcakes() {
@@ -219,6 +223,10 @@ cakesDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate cake<span class="price">$8</span><br /><small>chocolate fuge and moca inside with chocolate frosting in top. </small></p></div>',
 
 '<div class="item" onclick=this.classList.toggle("show-description")><p>confetti cake<span class="price">$8</span><br /><small>colorfull vanilla inside with vanilla frosting on top.</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>smores coffee cake<span class="price">$8</span><br /><small>smores and coffee flovers inside with a chocolate outside.</small></p></div>',
+
+
 ]
 cupcakesDivs = [
    '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate peanut butter cupcakes<span class="price">$14</span><br /><small>choclate cupcake with peanut butter filling inside and a peanut butter frosting with choclate drizzle. </small></p></div>',
@@ -251,4 +259,3 @@ milkshakesDivs = [
 </script>
 
 </body>
-
