@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <title>Anna Dowlin</title>
+  <style>
+    body {
+      text-align: center;
+      background:url(https://wpblink.com/sites/default/files/wallpaper/earth/68623/rose-bush-wallpapers-hd-68623-3491336.png);
+      background-size: px;
+      background-position: center;
+      color: yellow;
+      font-family: helvetica;
+      
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+      
+    }
+    input[type="submit"] {
+      background: teal;
+      color: white;
+    
+     
+    }
+    img {
+      width: 300px;
+      border-radius: 100px;
+    }
+  </style>
+</head>
+<body>
+  <img src=https://cdn.britannica.com/09/167709-131-36A6A6E8.jpg>
+  <p id = "dog"></p>
+  <input id = "flowers">
+  <input type="submit" onclick = "submit()">
+<script> 
+phone = document.getElementById("dog")
+prompts ={
+  job:"would you rather be a florist or a photographer?",
+  florist:"if you want to be a florist what occasions whould you be assisting in weddings or birthdays?",
+  photographer:"if you want to be a photographer what would you take pictures for magazine or blog?",
+  flowers:"what type of flowers would you use roses or tulips?",
+  designs:"what designs will you put on the flowers?",
+  magazine:"what magazine what you work for people or time?",
+  blog:"what type of blog whould you proved pictures for tv show or book reviews?",
+}
+apple = document.getElementById("flowers")
+function submit()  {
+     if (apple.value == "florist") {
+       //alert("you have pressed submit")
+       dog.innerHTML = prompts.florist
+       apple.value = ""
+      }
+      if (apple.value == "photographer") {
+       dog.innerHTML = prompts.photographer
+       apple.value = ""
+       
+      }
+       if (apple.value == "weddings") {
+       dog.innerHTML = prompts.flowers 
+       apple.value = ""
+       
+      }
+       if (apple.value == "birthdays") {
+       dog.innerHTML = prompts.designs
+       apple.value = ""
+       
+      }
+       if (apple.value == "magazine") {
+       dog.innerHTML = prompts.magazine
+       apple.value = ""
+       
+      }
+       if (apple.value == "blog") {
+       dog.innerHTML = prompts.blog
+       apple.value = ""
+       
+      }
+       if (apple.value == "roses") {
+       dog.innerHTML = prompts.designs
+       apple.value = ""
+       
+      }
+       if (apple.value == "tulips") {
+       dog.innerHTML = prompts.designs
+       apple.value = ""
+       
+      }
+}
+
+phone.innerHTML = prompts.job
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
