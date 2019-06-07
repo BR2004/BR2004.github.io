@@ -44,6 +44,7 @@ function setup() {
 }
 
 function draw() {
+if (touches.length == 0) {
    if (time > 0) { 
      background(25,70,100);
   fill(23,100,230)
@@ -60,6 +61,10 @@ function draw() {
   if(keyIsDown(RIGHT_ARROW)){
   x = x + 6
   }
+   }
+else {
+	100 = touches[0].x
+	200 = touches[0].y
   
   fill(24,140,210)
   circle(a*s,b,100*s)
