@@ -65,6 +65,7 @@ if (touches.length == 0) {
 else {
 	100 = touches[0].x
 	200 = touches[0].y
+}
   
   fill(24,140,210)
   circle(a*s,b,100*s)
