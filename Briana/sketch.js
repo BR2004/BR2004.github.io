@@ -44,11 +44,11 @@ function setup() {
 }
 
 function draw() {
-if (touches.length == 0) {
    if (time > 0) { 
-     background(25,70,100);
+    background(25,70,100);
   fill(23,100,230)
   circle(x*s,y,90*s)
+if (touches.length == 0) {
   if(keyIsDown(LEFT_ARROW)){
     x = x - 6
   }
@@ -63,8 +63,8 @@ if (touches.length == 0) {
   }
    }
 else {
-	100 = touches[0].x
-	200 = touches[0].y
+	x= touches[0].x
+	y = touches[0].y
 }
   
   fill(24,140,210)
