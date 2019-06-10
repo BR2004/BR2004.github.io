@@ -63,7 +63,7 @@ if (touches.length == 0) {
   }
    }
 else {
-	x= touches[0].x
+	x = touches[0].x
 	y = touches[0].y
 }
   
